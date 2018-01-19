@@ -7,10 +7,26 @@
 </head>
 
   <body>
+<!-- Hello@BriBiccari.Me -->
+<ul id="bands"></ul>
+    <script>
+    // List of 13 Bands //
+    const bands = ['IPrevail', 'Motionless In White', 'Ashes of My Regrets', 'My Chemical Romance', 'Suicide Silence', 'Five Finger Death Punch', 'I See Stars', 'Asking Alexandria', 'Breaking Benjamin', 'Our Last Night', 'The Devil Wears Prada', 'New Years Day', 'Bullet for My Valentine'];
 
+    funtion strip(bandName) {
+      return bandName.replace(/^(a |the |an )/i, '').trim();
+    }
 
+    const sortedBands = bands.sort(function (a, b) {
+      if(strip(a) > strip(b)) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
 
-
+    console.log(sortedBands);
+    </script>
 
 
 
